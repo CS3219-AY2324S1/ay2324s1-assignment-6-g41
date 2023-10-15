@@ -76,7 +76,7 @@ def fetch_leetcode_questions(n=10):
         if counter >= n:
             break
 
-        print(question["stat"]["frontend_question_id"])
+        # print(question["stat"]["frontend_question_id"])
         curr_q = {
             "id": question["stat"]["frontend_question_id"],
             "title": question["stat"]["question__title"],
@@ -85,8 +85,8 @@ def fetch_leetcode_questions(n=10):
             "description" : get_leetcode_question_description(question["stat"]["question__title_slug"]),
             "link": "https://leetcode.com/problems/" + question["stat"]["question__title_slug"]
         }
-        print(curr_q["description"])
-        print(counter)
+        # print(curr_q["description"])
+        # print(counter)
         if curr_q["description"] != "None":
             questions.append(curr_q)
             counter += 1
