@@ -24,6 +24,7 @@ functions:
     handler: run
     events:
       - http: run 
+    environment: ${file(env.json)}
 
 custom:
   pythonRequirements:
