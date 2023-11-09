@@ -6,6 +6,7 @@ How to Deploy:
 
 1. Get the service_key needed to make changes in the Google Cloud Project (Can contact me e0550416@u.nus.edu)
 1. Set path to service_key file as an environmental variable called `GOOGLE_APPLICATION_CREDENTIALS`
+1. Add the env.json with the mongo link, db name, and client.
 1. Install `npm`, `docker`, and `serverless` (https://www.serverless.com/framework/docs/providers/google/guide/installation)
 1. Run `serverless deploy` to deploy the function to google cloud
 1. Get the url returned by `serverless`
