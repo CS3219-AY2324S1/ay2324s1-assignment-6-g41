@@ -1,0 +1,3 @@
+.serverless/*
+# for mongo link
+env.json

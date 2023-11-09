@@ -1,1 +1,32 @@
-# your code here
+service: fetchfromleetcode
+
+provider:
+  name: google
+  stage: dev
+  runtime: python39
+  region: asia-southeast1
+  project: cs3219-group41
+
+frameworkVersion: '3'
+plugins:
+  - serverless-google-cloudfunctions
+  - serverless-python-requirements
+
+
+package:
+  exclude:
+    - node_modules/**
+    - .gitignore
+    - .git/**
+
+functions:
+  leetcodefetcher:
+    handler: run
+    events:
+      - http: run 
+    environment: ${file(env.json)}
+
+custom:
+  pythonRequirements:
+     dockerizePip: non-linux
+     dockerImage: public.ecr.aws/sam/build-python3.9:latest
